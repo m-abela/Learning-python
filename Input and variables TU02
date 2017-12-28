@@ -1,0 +1,4 @@
+MyName = input("what is your name:")
+print(MyName+'?')
+
+print('sounds like a very stupid name......')
