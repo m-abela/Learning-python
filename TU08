@@ -1,0 +1,4 @@
+number = 12 #You have to declare this first
+while number < 13.3 or number > 20.7 :
+    print("Please enter a number between 15 and 20")
+    number = float(input("enter a number:"))
