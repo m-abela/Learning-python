@@ -1,0 +1,6 @@
+maxheights = 186
+yourheight = int(input("What's your height in cm?"))
+if maxheights > yourheight:
+    print("Ha! Max is way taller than youuuuuu!!!")
+elif maxheights < yourheight:
+        print("Awww snap! you're taller than Max")
