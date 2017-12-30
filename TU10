@@ -1,0 +1,11 @@
+import random
+Choose_Name = ["James","John","Mark","Rick"]
+while True:
+    if not Choose_Name:
+        break
+    chosen = random.choice(Choose_Name)
+    print(chosen)
+    delete = input("would you like to remove the name? y/n")
+    if delete == "y":
+        Choose_Name.remove(chosen)
+
