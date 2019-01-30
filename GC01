@@ -1,0 +1,15 @@
+import random
+numbguess = random.randint(1,100)
+number = int(input("guess a number from 1 - 100"))
+while number > 100:
+	number = int(input("guess a number from 1 - 100"))
+while number != numbguess:
+	if number > numbguess:
+		print(number)
+		print("your guess is too high")
+		number = int(input("guess a number from 1 - 100"))
+	elif number < numbguess:
+		print(number)
+		print("your guess is too low")
+		number = int(input("guess a number from 1 - 100"))
+print("well done! The correct number was: ", numbguess)
