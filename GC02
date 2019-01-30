@@ -1,0 +1,9 @@
+vtime = int(input("time in 12 hour format: "))
+while vtime > 12:
+	vtime = int(input("time in 12 hour format: "))
+ampm = (input("am or pm?"))
+if ampm == "am":
+	print("the time is:", vtime)
+if ampm == "pm":
+	print("the time is:")
+	print(vtime+12)
