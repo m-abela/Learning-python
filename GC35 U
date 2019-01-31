@@ -1,0 +1,12 @@
+q1 = input("what is your question p1?")
+a1 = input("what is your answer p1?")
+q2 = input("what is your question p2?")
+a2 = input("what is your answer p2?")
+
+if input("p2, ", q1) == a1:
+    print("well done p2!")
+else:
+    print("haha loser")
+if input("p1, ", q2) == a2:
+    print("well done p1!")
+else: print("loser bro")
