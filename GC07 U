@@ -1,0 +1,9 @@
+x = int(input("How much money would you like to withdraw"))
+bank = int(input("how much money u got bro"))
+while x % 3 != 0:
+    x = int(input("How much money would you like to withdraw"))
+x = x + 0.5
+if bank < x:
+    print("you don't have enough money")
+else:
+    print("transaction successful")
