@@ -1,0 +1,20 @@
+money = float(input("how much money you got?"))
+print("1. chips 0.25c")
+print("2. soda 0.5c")
+print("3. chocolate 1c")
+snack = input("which snack?")
+if snack == "1":
+    if money < 0.25:
+        print("not enough money")
+    else:
+        print("here's your chips")
+if snack == "2":
+    if money < 0.5:
+        print("not enough money")
+    else:
+        print("here's your soda")
+if snack == "3":
+    if money < 1:
+        print("not enough money")
+    else:
+        print("here's your chocolate")
