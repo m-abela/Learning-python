@@ -1,0 +1,4 @@
+bottle = int("99")
+while bottle != 0:
+    print(bottle, " bottles on the wall, take one down, pass it around ", bottle - 1, " bottles on the wall")
+    bottle = bottle - 1
