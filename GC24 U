@@ -1,0 +1,5 @@
+number = (input("check if number is a float"))
+if isinstance(number, int):
+    print("number is integer")
+if isinstance(number, float):
+    print("number is float")
