@@ -1,0 +1,13 @@
+play = "yes"
+while play == "yes":
+    confess1 = input("will prisoner 1 confess or not y/n?")
+    confess2 = input("will prisoner 2 confess or not y/n?")
+    if confess1 == "y" and confess2 == "n":
+        print("prisoner 1 is free and prisoner 2 has a 20 year sentence")
+        play = input("want to play again? yes or no")
+    if confess1 == "n" and confess2 == "n":
+        print("Both prisoners have a one year sentence")
+        play = input("want to play again? yes or no")
+    if confess1 == "y" and confess2 == "y":
+        print("Both prisoners have a 5 year sentence")
+        play = input("want to play again? yes or no")
