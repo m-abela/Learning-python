@@ -1,0 +1,6 @@
+timestable = int(input("which timetable do you want?"))
+print(timestable)
+for i in range(10):
+    print(timestable**i)
+
+
