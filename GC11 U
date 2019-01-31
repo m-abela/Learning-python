@@ -1,0 +1,3 @@
+length = int(input("what is the length"))
+length2 = length/1.61
+print(round(length2,1)," : ", length)
