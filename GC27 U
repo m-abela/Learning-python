@@ -1,0 +1,16 @@
+count = float("0")
+while count != "20" or lose == "1":
+    number = float(input("what number comes next"))
+    count = count + 1
+    if number != count:
+        print("you lose!")
+        lose = "1"
+    if count % 3 == 0:
+        if number != "fizz":
+            print("you lose!")
+            lose = "1"
+
+    if count % 5 == 0:
+        if number != "buzz":
+            print("you lose!")
+            lose = "1"
