@@ -1,0 +1,10 @@
+team1 = input("what is team 1 called?")
+team2 = input("what is team 2 called?")
+end = ""
+t1score = 0
+t2score = 0
+while end != "yes":
+    t1score = t1score + int(input("How much did team 1 score?"))
+    t2score = t2score + int(input("How much did team 1 score?"))
+    print("team 1:",t1score, "team 2:", t2score)
+    end = input("would you like to end game?")
