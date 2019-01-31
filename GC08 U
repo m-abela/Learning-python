@@ -1,0 +1,4 @@
+weight = int(input("Input your weight"))
+height = int(input("input your height in cm"))
+BMI = weight/((height/100)**2)
+print("fatty, your BMI is: ", BMI)
