@@ -1,0 +1,12 @@
+phrase = "aklsjdfhlaksjfhlkjadfsh"
+print("aklsjdfhlaksjfhlkjadfsh")
+input2 = input("type this phrase")
+if input2 == "aklsjdfhlaksjfhlkjadfsh":
+    print("successful")
+    input2 = input("type this phrase")
+    if input2 == "aklsjdfhlaksjfhlkjadfsh":
+        print("well done!")
+    else:
+        print("you've failed")
+else:
+    print("you fail")
