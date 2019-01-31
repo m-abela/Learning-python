@@ -1,0 +1,57 @@
+
+import re
+
+def calcCheckDigit( code ):
+
+    result = -1
+    code = code.replace('-', '').replace(' ', '')
+    if re.match('^\d*$', code):
+        result = {
+            9 : calcCheckDigitForISBN10,
+            12 : calcCheckDigitForISBN13
+        }.get( len(code), lambda n: -1)( code )
+
+    return result
+
+def calcCheckDigitForISBN10( code ):
+
+    result = -1
+    
+    sum = 0
+    code = code[::-1] # reverse string
+    for i in range(len(code)):
+        digit = int(code[i])
+        sum += digit * (i + 2)
+
+    result = (11 - sum % 11) % 11
+
+    return result
+
+def calcCheckDigitForISBN13( code ):
+    
+    result = -1
+    
+    sum = 0
+
+    for i in range(len(code)):
+        digit = int(code[i])
+        sum += digit * (3 if isOdd(i) else 1)
+
+    result = (10 - sum % 10) % 10
+
+    return result
+
+def isOdd( n ): 
+    return n % 2 != 0
+
+isbns = [
+    "081182184", #6
+    "978-081182184", #1
+    "161655041", #4
+    "978-161655041", #7
+    "055341802", #5
+    "978-055341802", #6
+]
+
+for isbn in isbns:
+    print ( "Check digit for ISBN({0}) = {1}".format(isbn, calcCheckDigit(isbn)) )
