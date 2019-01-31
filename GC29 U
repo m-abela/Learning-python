@@ -1,0 +1,5 @@
+import random
+students = int(input("how many students"))
+report = ["stupid", "smart", "has potential"]
+for i in range(students):
+    print(random.sample(report,1))
