@@ -1,0 +1,5 @@
+Xnumber = int(input("how many triangles do you want"))
+number = 1
+while number != Xnumber + 1:
+	print(number*("x"))
+	number=number+1
