@@ -1,0 +1,7 @@
+MyList = ["Kuala Lumpur","London","Paris","New York","Bangkok"]
+print(MyList[0])
+print(MyList[0:3])
+MyList.append("afghanistan")
+MyList.remove("Kuala Lumpur")
+MyList.sort()
+print(MyList)
