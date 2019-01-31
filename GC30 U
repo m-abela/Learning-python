@@ -1,0 +1,136 @@
+#Countdown Letters Game by Harvey Taylor
+#Comments, Suggestions and Complaints to @hs_taylor
+
+#THE RULES
+'''
+Letter tiles are arranged face-down in two piles; one all consonants,
+the other vowels.
+
+The contestant picks a pile, and Riley reveals the top tile from that pile
+and places it on the board. 
+
+A selection of nine tiles is generated in this way, and must contain at least
+three vowels and four consonants
+
+Vowels
+  A      15  
+  E      21  
+  I      13  
+  O      13  
+  U       5  
+  Total  67  
+
+Consonants
+  B       2  
+  C       3  
+  D       6  
+  F       2  
+  G       3  
+  H       2  
+  J       1  
+  K       1  
+  L       5  
+  M       4  
+  N       8  
+  P       4  
+  Q       1  
+  R       9  
+  S       9  
+  T       9  
+  V       1  
+  W       1  
+  X       1  
+  Y       1  
+  Z       1  
+  Total  74 
+
+''' 
+
+import random
+from time import sleep
+
+#Define  Variables
+TOTALLETTERS = 9 
+choice = str()
+n = 1 #iteration variable
+numbervowels = 0 #counts the number of vowels chosen
+numberconsonants = 0 #counts the number of consonants chosen
+
+def cls(): #function to Clear SCreen and give clearer output
+    print("\n" *50)
+
+#Define Lists
+letterslist =[] #stores all the chosen letters
+vowelchoice = ["a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","e","i","i","i","i","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","o","o","o","o","o","u","u","u","u","u"]
+consonantchoice =["b","b","c","c","c","d","d","d","d","d","d","f","f","g","g","g","h","h","j","k","l","l","l","l","l","m","m","m","m","n","n","n","n","n","n","n","n","p","p","p","p","q","r","r","r","r","r","r","r","r","r","s","s","s","s","s","s","s","s","s","t","t","t","t","t","t","t","t","t","v","w","x","y","z"]
+
+cls()
+#Instructions
+print ("Choose a selection of nine tiles by choosing either a Consonant or a Vowel\n")
+print ("Your choice must include at least three vowels and four consonants")
+
+#Choose Vowels or Consonants
+while n <= TOTALLETTERS: # initialise the loop
+    print ("\nPlease choose a vowel or consonant for letter number", n)
+    choice = input ()
+
+    if choice == "vowel" or choice == "v":
+        cls()
+        print ("\nYou chose a Vowel")
+        vowel = random.choice(vowelchoice) #choose vowel from vowel list
+        vowelupper = vowel.upper()
+        letterslist.append(vowelupper) #add vowel to list 
+        vowelchoice.remove(vowel) #remove vowel as a choice from the list of vowels
+        print ("The Vowel chosen is", vowelupper)
+        n = n + 1
+        numbervowels = numbervowels + 1
+        print ("\nYou have chosen", numbervowels,"Vowels and",numberconsonants,"Consonants\n")
+
+        #Change list to String to remove punctuation
+        strletters = (str(letterslist).strip ("[]")) #list changed to string and  remove square brackets
+        strletters = strletters.replace("'", "") #remove the quote marks between list items
+        strletters = strletters.replace(",", "") #remove the commas between list items 
+
+        #print our the choice of letters so far
+        print ("The Letters you have chosen are as follows")
+        print (strletters)
+        
+    elif choice == "consonant" or choice == "c":
+        cls()
+        print ("\nYou chose a Consonant")
+        consonant = random.choice(consonantchoice) #choose consonant from consonant list
+        consonantupper = consonant.upper()
+        letterslist.append(consonantupper) #add consonant to list 
+        consonantchoice.remove(consonant) #remove consonant as a choice from the list of consonants
+        print ("The Consonant chosen is", consonantupper)
+        n = n + 1
+        numberconsonants = numberconsonants + 1
+        print ("\nYou have chosen", numbervowels,"Vowels and",numberconsonants,"Consonants\n")
+
+        #Change list to String to remove punctuation
+        strletters = (str(letterslist).strip ("[]")) #list changed to string and  remove square brackets
+        strletters = strletters.replace("'", "") #remove the quote marks between list items
+        strletters = strletters.replace(",", "") #remove the commas between list items 
+
+        #print our the choice of letters so far
+        print ("The Letters you have chosen are as follows")
+        print (strletters)
+
+    else:
+        cls()
+        print ("Invalid choice, please choose a Vowel or Consonant")
+
+pause = input ("\nPress Enter to continue")
+cls()
+
+#Countdown 30 seconds
+counternumber = 31
+for x in range (0,31):
+    print ("The Letters for this round are", strletters)
+    counternumber = counternumber - 1
+    print (counternumber,"Seconds left")
+    sleep(1.0)
+    cls()
+print ("Time is Up!!!\n")
+print ("The Letters for this round were", strletters)
+
