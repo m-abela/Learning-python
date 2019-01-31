@@ -1,0 +1,5 @@
+timeneeded = int("51")
+days = round((51/24),0)
+hours = timeneeded - (24*days)
+time = (2+hours)
+print("set a time for: ",time)
