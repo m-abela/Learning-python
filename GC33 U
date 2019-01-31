@@ -1,0 +1,14 @@
+end = "no"
+food = []
+calories = int("0")
+while end == "no":
+    food.append(input("what food did you consume?"))
+    calories = calories + int(input("how many calories?"))
+    end = input("has day ended?")
+print("you have eaten:", food)
+print("calories consumed:", calories)
+
+if calories<2000:
+    print("you need:", (2000 - calories), "more calories")
+else:
+    print("you are eating too much")
