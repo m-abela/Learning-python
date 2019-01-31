@@ -1,0 +1,7 @@
+import time
+siblingtime = int(input("how much time do you want one sibling to have: "))
+
+while siblingtime > -1:
+    time.sleep(1)
+    print(siblingtime)
+    siblingtime = siblingtime - 1
