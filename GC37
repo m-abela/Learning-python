@@ -1,0 +1,5 @@
+all = "all"
+work = "work"
+no = "no"
+play = "play"
+print(all,work,no,play)
