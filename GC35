@@ -1,0 +1,11 @@
+import random
+no1 = random.randint(1,12)
+no2 = random.randint(1,12)
+ans = no1*no2
+print("what is", no1, "x", no2)
+answer = int(input("your answer:"))
+if answer == ans:
+    print("well done, you got it right")
+if answer != ans:
+    print("you stupid")
+    print(ans)
