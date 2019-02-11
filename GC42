@@ -1,0 +1,10 @@
+import random
+MyList = []
+for i in range(50):
+    MyList.append(random.randint(1,100))
+print(sum(MyList))
+print(min(MyList))
+print(max(MyList))
+print(len(MyList))
+print(sum(MyList)/len(MyList))
+
