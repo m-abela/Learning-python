@@ -1,0 +1,9 @@
+speed = (input("What is the speed"))
+time = (input("What is the time"))
+distance = (input("What is the distance"))
+if speed == "n":
+    print(distance/time)
+if time == "n":
+    print(distance/speed)
+if distance =="n":
+    print(speed*time)
