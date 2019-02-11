@@ -1,0 +1,4 @@
+import random
+roast = ["pig", 'you look like rei', 'youre almost as annoying as songli', 'you smell like cow dung', 'did you get dropped as a baby', 'your ass is useless cuz everything comes out your mouth']
+name = input("what is the person's name")
+print("ay", name, (random.choice(roast)))
