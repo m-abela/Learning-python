@@ -1,0 +1,3 @@
+turtle.foward(r1+30)
+turtle.right(90)
+turtle.foward (10000)
