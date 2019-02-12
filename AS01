@@ -1,0 +1,17 @@
+import random
+alist=[]
+def BubbleSort(alist):
+    left = len(alist)-1
+    while left > 0:
+
+       for i in range(left):
+           if alist[i]>alist[i+1]:
+                temp = alist[i]
+                alist[i] = alist[i+1]
+                alist[i+1] = temp
+       left = left-1
+
+for i in range(9):
+    alist.append(random.randint(1,100))
+BubbleSort(alist)
+print(alist)
