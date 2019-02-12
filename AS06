@@ -1,0 +1,8 @@
+mylist = ['a','e','i','o','u']
+num = len(mylist)-1
+cowelcount = 0
+for i in range(num+1):
+    if mylist[num] == 'a' or 'e' or 'i' or 'o' or 'u':
+        cowelcount = cowelcount +1
+
+print("vowel count:", cowelcount)
