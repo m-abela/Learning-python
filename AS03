@@ -1,0 +1,2 @@
+string = input("what would you like written backwards?")
+print(string[-1:-7:-1])
