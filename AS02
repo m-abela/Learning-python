@@ -1,0 +1,15 @@
+Alist = ["john",'lot','smith','banana','nohomo']
+search = input("What word would you like to search up?")
+num2 = 0
+found = 0
+num = int(len(Alist))
+for i in range(num):
+
+    if search == Alist[num2]:
+        found = 1
+
+
+    num2 = num2 +1
+
+if found == 1:
+    print(search,"found")
