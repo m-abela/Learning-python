@@ -1,0 +1,41 @@
+import random
+moves = ['rock','paper','scissors']
+rounds = int(input("how many round you wanna play"))
+score = 0
+AIscore = 0
+draw = 0
+for i in range(rounds):
+    AI = random.choice(moves)
+    yourmove = input("rock, paper, scissors?")
+    print(AI)
+    if AI == "rock":
+        if yourmove == "rock":
+            whowon = "draw"
+        if yourmove == "paper":
+            whowon = "youwin"
+        if yourmove == "scissors":
+            whowon = "youlose"
+    if AI == "scissors":
+        if yourmove == "rock":
+            whowon = "youwin"
+        if yourmove == "paper":
+            whowon = "youlose"
+        if yourmove == "scissors":
+            whowon = "draw"
+    if AI == "paper":
+        if yourmove == "rock":
+            whowon = "youlose"
+        if yourmove == "paper":
+            whowon = "draw"
+        if yourmove == "scissors":
+            whowon = "youwin"
+    if whowon == "youwin":
+        score = score + 1
+    elif whowon == "youlose":
+        AIscore = AIscore +1
+    else: 
+        draw = draw +1
+        
+print("you won:",score)
+print("you lose:", AIscore)
+print("you drew", draw)
