@@ -1,0 +1,20 @@
+L2I = dict(zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ",range(26)))
+I2L = dict(zip(range(26),"ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+
+key = int(input("what key you want bro"))
+encryptedtext = input("what text do you want to be encrypted?")
+
+
+ciphertext = ""
+for i in encryptedtext.upper():
+    if i.isalpha(): ciphertext += I2L[ (L2I[i] + key)%26 ]
+    else: ciphertext += i
+
+plaintext2 = ""
+for i in ciphertext.upper():
+    if i.isalpha(): plaintext2 += I2L[ (L2I[i] - key)%26 ]
+    else: plaintext2 += i
+
+print(encryptedtext)
+print(ciphertext)
+print(plaintext2)
