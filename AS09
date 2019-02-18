@@ -1,0 +1,8 @@
+word = ['s','p','o','t']
+guess = input("guess a word buddy")
+guessclose = 0
+for i in range(4):
+    if word[i] in guess:
+        guessclose = guessclose + 1
+
+print('you were this close:', guessclose)
