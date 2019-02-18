@@ -1,0 +1,16 @@
+vowels = ['a','e','i','o','u']
+word = input("input a nice word")
+wordcount = sum(c.isalpha() for c in word)
+letterinrow = 0
+vowelcount = 0
+for i in range(wordcount):
+    if vowels[i] in word:
+        vowelcount = vowelcount +1
+
+for i in range(wordcount):
+    if word[i] == word[i+1]:
+        letterinrow = 1
+
+if vowelcount > 2 and letterinrow == 1:
+    print("nice word buddy")
+        
