@@ -1,0 +1,13 @@
+brackchecker = input("yo what code you want checked bro")
+wordcount = sum(c.isalpha() for c in brackchecker)
+bracket = 0
+for i in range (wordcount):
+    if brackchecker[i] == '(':
+        bracket = bracket +1
+    if brackchecker[i] == ')':
+        bracket = bracket +1
+
+if bracket % 2 ==0:
+    print("banana ghood bracket bro")
+else:
+    print("bro you suck at programming")
