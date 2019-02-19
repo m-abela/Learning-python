@@ -1,0 +1,16 @@
+password = input("gimme your password scum")
+integer = 0
+repeat = sum(c.isalpha() for c in password)
+for i in range(repeat):
+    if password[i] == int:
+        integer = integer +1
+
+if integer >0:
+    if repeat > 8 or repeat == 8:
+        print("gud gud")
+
+if repeat < 8:
+    print("too little characters bro")
+
+if integer == 0:
+    print("no numbers bro")
