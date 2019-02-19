@@ -1,0 +1,5 @@
+grossprofit = int(input("gross profit"))
+netprofit = int(input("net profit"))
+sales = int(input("sales"))
+print("GPM = ",((grossprofit/sales)*100) )
+print("NPM = ",((netprofit/sales)*100) )
