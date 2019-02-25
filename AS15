@@ -1,0 +1,4 @@
+def currentYear():
+    print('2018')
+
+currentYear()
