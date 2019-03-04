@@ -1,0 +1,62 @@
+wins2 = 0
+wins1 = 0
+player1wins = []
+player2wins = []
+
+
+for i in range(3):
+    player1 = input("player 1 move:")
+    while player1 != "rock" or "paper" or "scissors":
+        player1 = input("player 1 move:")
+    player2 = input("player 2 move:")
+    while player2 != "rock" or "paper" or "scissors":
+        player2 = input("player 1 move:")
+
+    if player1 == "rock":
+        if player2 == "rock":
+            print("draw")
+            draw = draw + 1
+        if player2 == "paper":
+            print("Player 2 wins")
+            wins2 = wins2 +1
+            player2wins.append("paper")
+        if player2 == "scissors":
+            print("player 1 wins")
+            wins1 = wins1 +1
+            player1wins.append("rock")
+
+    if player1 == "paper":
+        if player2 == "rock":
+            print("Player 1 wins")
+            wins1 = wins1 +1
+            player1wins.append("paper")
+        if player2 == "paper":
+            print("draw")
+            draw = draw + 1
+        if player2 == "scissors":
+            print("player 2 wins")
+            wins2 = wins2 +1
+            player2wins.append("scissors")
+
+    if player1 == "scissors":
+        if player2 == "rock":
+            print("Player 2 wins")
+            wins2 = wins2 +1
+            player2wins.append("rock")
+        if player2 == "paper":
+            print("Player 1 wins ")
+            wins1 = wins1 +1
+            player1wins("scissors")
+        if player2 == "scissors":
+            print("draw")
+            draw = draw + 1
+
+if player1wins > player2wins:
+    print("player 1 wins:", wins1, player1wins)
+elif player2wins > player1wins:
+    print("player 2 wins:", wins2, player2wins)
+else:
+    print("draws:", draw)
+
+
+
