@@ -5,67 +5,66 @@ move = ["rock","paper","scissors"]
 window = tkinter.Tk()
 MyTitle = tkinter.Label(window, text="rockpaperscissors",font="Helvetica 16 bold")
 MyTitle.pack()
-def whowon():
-    whowon = tkinter.Label(window, text=whowon, font="Helvetica 16 bold")
-    whowon.pack()
-    print(whowon)
 
 def rock():
-     yourmove = "rock"
-     play()
+    AI = random.choice(move)
+    print(AI)
+
+    if AI == "rock":
+        whowon = tkinter.Label(window, text="Draw",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
+    if AI == "paper":
+        whowon = tkinter.Label(window, text="You Lose!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
+    if AI == "scissors":
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon = tkinter.Label(window, text="You Win!",font="Helvetica 16 bold")
+        whowon.pack()
 
 def paper():
-     yourmove = "paper"
-     play()
+    AI = random.choice(move)
+    print(AI)
+
+    if AI == "rock":
+        whowon = tkinter.Label(window, text="You Win!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
+    if AI == "paper":
+        whowon = tkinter.Label(window, text="Draw!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
+    if AI == "scissors":
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon = tkinter.Label(window, text="You Lose!",font="Helvetica 16 bold")
+        whowon.pack()
+
 
 def scissors():
-     yourmove = "scissors"
-     play()
-
-def play():
     AI = random.choice(move)
-    AImove = tkinter.Label(window, text=AI, font="Helvetica 16 bold")
-    AImove.pack()
+    print(AI)
     if AI == "rock":
-            if yourmove == "rock":
-
-                whowon = 'draw'
-                print("work")
-            if yourmove == "paper":
-
-                whowon = 'You win!'
-                print("work")
-            if yourmove == "scissors":
-
-                whowon = 'You lose!'
-            print("work")
-    if AI == "scissors":
-        if yourmove == "rock":
-
-            whowon = 'You win!'
-            print("work")
-        if yourmove == "paper":
-
-            whowon = 'You lose!'
-            print("work")
-        if yourmove == "scissors":
-
-            whowon = 'draw'
-            print("work")
+        whowon = tkinter.Label(window, text="You Lose!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
     if AI == "paper":
-        if yourmove == "rock":
-
-            whowon = 'You lose!'
-            print("work")
-        if yourmove == "paper":
-
-            whowon = 'draw'
-            print("work")
-        if yourmove == "scissors":
-
-            whowon = 'You win!'
-            print("work")
-    whowon()
+        whowon = tkinter.Label(window, text="You Win!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
+    if AI == "scissors":
+        whowon = tkinter.Label(window, text="Draw!",font="Helvetica 16 bold")
+        AI = tkinter.Label(window, text=AI,font="Helvetica 16 bold")
+        AI.pack()
+        whowon.pack()
 
 rock = tkinter.Button(window, text="rock", command=rock)
 rock.pack()
@@ -77,3 +76,4 @@ scissors= tkinter.Button(window, text="scissors", command=scissors)
 scissors.pack()
 
 window.mainloop()
+
