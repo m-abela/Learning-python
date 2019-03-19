@@ -1,0 +1,7 @@
+import random
+floors = int(input("how many floors are there in the building?"))
+randfloors = []
+for i in range(floors):
+    randfloors.append(i)
+random.shuffle(randfloors)
+print(randfloors)
