@@ -1,0 +1,29 @@
+#task1
+temperatures_midday = []
+temperatures_midnight = []
+day = []
+tempinput = -100
+for i in range(2):
+    while tempinput > 50.0 or tempinput < 0.0:
+        tempinput = float(input("What was the temperature at midday?"))
+    temperatures_midday.append(tempinput)
+    tempinput = -100
+    while tempinput > 50.0 or tempinput < 0.0:
+        tempinput = float(input("What was the temperature at midnight?"))
+    temperatures_midnight.append(tempinput)
+    tempinput = -100
+    day.append(i)
+
+#task2
+totalmidday = 0
+totalmidnight = 0
+for i in range(2):
+    totalmidday = totalmidday + temperatures_midday[i]
+    totalmidnight = totalmidnight + temperatures_midnight[i]
+
+print("midday average temperature for 30 days is:", (totalmidday/30))
+print("midnight average temperature for 30 days is:", (totalmidnight/30))
+
+#task3
+print("minimum temp at midnight:", min(temperatures_midnight))
+print("minimum temp at midday:", min(temperatures_midday))
