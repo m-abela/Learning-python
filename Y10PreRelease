@@ -25,5 +25,7 @@ print("midday average temperature for 30 days is:", (totalmidday/30))
 print("midnight average temperature for 30 days is:", (totalmidnight/30))
 
 #task3
-print("minimum temp at midnight:", min(temperatures_midnight))
-print("maximum temp at midday:", max(temperatures_midday))
+a = temperatures_midday.index(max(temperatures_midday))+1
+b = temperatures_midnight.index(min(temperatures_midnight))+1
+print("minimum temp at midnight:", min(temperatures_midnight), "on day", b)
+print("maximum temp at midday:", max(temperatures_midday), "on day", a)
