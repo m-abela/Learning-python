@@ -1,0 +1,16 @@
+import random
+onehand = []
+twohand = []
+for i in range(5):
+    onehand.append(random.randint(1,100))
+    twohand.append(random.randint(1,100))
+print("first hand: ",onehand)
+print("second hand:",twohand)
+play1 = input("what do you want to play")
+onehand.remove(play1)
+play2 = input("what do you want to play, player2")
+twohand.remove(play1)
+if onehand > twohand:
+    print("first player wins!")
+else:
+    print("second player wins")
