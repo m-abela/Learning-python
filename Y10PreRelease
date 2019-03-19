@@ -26,4 +26,4 @@ print("midnight average temperature for 30 days is:", (totalmidnight/30))
 
 #task3
 print("minimum temp at midnight:", min(temperatures_midnight))
-print("minimum temp at midday:", min(temperatures_midday))
+print("maximum temp at midday:", max(temperatures_midday))
