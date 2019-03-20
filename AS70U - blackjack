@@ -1,0 +1,39 @@
+import random
+play1 = []
+play2 = []
+for i in range(2):
+    play1.append(random.randint(1,10))
+    play2.append(random.randint(1,10))
+print("player1 cards:" ,play1)
+print("player2 cards:", play2)
+wantanothercard1 = input("player 1, do you want another card?")
+if wantanothercard1 == "no" or "n":
+    wantanothercard2 = input("player 2, do you want another card?")
+    if wantanothercard2 == "yes" or "y":
+        play2.append(random.randint(1,10))
+        if sum(play1)> sum(play2):
+            if sum(play1) > 21:
+                print("player 1 loses")
+            else:
+                print("player 1 wins!")
+        else:
+            if sum(play2) > sum(play1):
+                if sum(play2) > 21:
+                    print("you both lose")
+                else:
+                    
+                    print("player 2 wins!")
+else:
+    play1.append(random.randint(1,10))
+    if sum(play1)> sum(play2):
+            if sum(play1) > 21:
+                print("player 1 loses")
+            else:
+                print("player 1 wins!")
+    else:
+            if sum(play2) > sum(play1):
+                if sum(play2) > 21:
+                    print("you both lose")
+                else:
+                    
+                    print("player 2 wins!")
