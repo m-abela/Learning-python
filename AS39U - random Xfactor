@@ -1,0 +1,18 @@
+import random
+song = []
+artists = []
+band1 = []
+band2 = []
+for i in range(10):
+    song.append(input("input a song"))
+    artists.append(input("input an artist"))
+for i in range(5):
+    artistchosen = artists[(random.randint(1,len(artists)))]
+    artists.remove(artistchosen)
+    band1.append(artistchosen)
+    artistchosen = artists[(random.randint(1,len(artists)))]
+    artists.remove(artistchosen)
+    band2.append(artistchosen)
+for i in range(10):
+    band1songs.appendsong[(random.randint(1,10))]
+    band2songs.appendsong[(random.randint(1,10))]
