@@ -1,1 +1,21 @@
+word = input("yo gimme yo text file")
+spaces = 0
+wordlengths =[]
+wordletters = 0
+lettertotal = 0
+for i in range(len(word)):
+    if word[i] == ' ':
+        spaces = spaces + 1
+        wordlengths.append(wordletters)
+        wordletters = 0
+    else:
+        wordletters = wordletters + 1
+print(spaces)
+print(wordlengths)
+if spaces == 0:
+    spaces = spaces + 1
+    wordlengths.append(len(word))
+for i in range(len(wordlengths)):
+    lettertotal = lettertotal+wordlengths[i]
+print("average word count:", lettertotal/spaces)
 
