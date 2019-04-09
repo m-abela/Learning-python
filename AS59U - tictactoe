@@ -1,0 +1,77 @@
+firstrow = [1,2,3]
+secondrow = [4,5,6]
+thirdrow = [7,8,9]
+hiddenboard = [1,2,3,4,5,6,7,8,9]
+
+win = 0
+
+onemoves = []
+twomoves = []
+
+def board():
+    print(*firstrow,sep = '  ')
+    print(*secondrow,sep = '  ')
+    print(*thirdrow,sep = '  ')
+
+winone = [1,2,3]
+wintwo = [4,5,6]
+winthree = [7,8,9]
+winfour = [1,4,7]
+winfive = [2,5,8]
+winsix = [3,6,9]
+winseven = [1,5,9]
+wineight = [3,5,7]
+
+while True:
+    print("\nPlayer one's turn.")
+    board()
+    while True:
+        move = int(input("Position number 1-9: "))
+        if move in hiddenboard:
+            onemoves.append(move)
+            hiddenboard[move-1] = "o"
+        if move in firstrow:
+            firstrow[move-1] = "o"
+            break
+        elif move in secondrow:
+            secondrow[move-4] = "o"
+            break
+        elif move in thirdrow:
+            thirdrow[move-7] = "o"
+            break
+        else:
+            print("Please enter a valid move.")
+    if(all(x in onemoves for x in winone)) or all(x in onemoves for x in wintwo) or all(x in onemoves for x in winthree) or all(x in onemoves for x in winfour) or all(x in onemoves for x in winfive) or all(x in onemoves for x in winsix) or all(x in onemoves for x in winseven):
+        print("Player one wins.")
+        board()
+        break
+    elif(all(x in twomoves for x in winone)) or all(x in twomoves for x in wintwo) or all(x in twomoves for x in winthree) or all(x in twomoves for x in winfour) or all(x in twomoves for x in winfive) or all(x in twomoves for x in winsix) or all(x in twomoves for x in winseven):
+        print("Player two wins.")
+        board()
+        break
+    print("\nPlayer two's turn.")
+    board()
+    while True:
+        move = int(input("Position number 1-9: "))
+        if move in hiddenboard:
+            hiddenboard[move-1] = "o"
+            twomoves.append(move)
+        if move in firstrow:
+            firstrow[move-1] = "x"
+            break
+        elif move in secondrow:
+            secondrow[move-4] = "x"
+            break
+        elif move in thirdrow:
+            thirdrow[move-7] = "x"
+            break
+        else:
+            print("Please enter a valid move.")
+    if(all(x in onemoves for x in winone)) or all(x in onemoves for x in wintwo) or all(x in onemoves for x in winthree) or all(x in onemoves for x in winfour) or all(x in onemoves for x in winfive) or all(x in onemoves for x in winsix) or all(x in onemoves for x in winseven):
+        print("Player one wins.")
+        board()
+        break
+    elif(all(x in twomoves for x in winone)) or all(x in twomoves for x in wintwo) or all(x in twomoves for x in winthree) or all(x in twomoves for x in winfour) or all(x in twomoves for x in winfive) or all(x in twomoves for x in winsix) or all(x in twomoves for x in winseven):
+        print("Player two wins.")
+        board()
+        break
