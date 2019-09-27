@@ -1,0 +1,10 @@
+organised = []
+with open('readnwrite.txt', 'r+') as r:
+    for line in sorted(r):
+        print(line, end='')
+        organised.append(line)
+    r.truncate(0)
+
+with open('readnwrite.txt', 'w') as f:
+    for item in organised:
+        f.write("%s\n" % item)
