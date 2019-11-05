@@ -1,0 +1,67 @@
+#task1
+cow_yield = []
+cow_identity = []
+weekday = []
+yieldamount = 14
+cows = input(int("how many cows are there?"))
+# this inputs what yield the cow got twice a day for each day
+for i in range(cows):
+   cow_identity.append(int("What is the identity code number of the cow?"))
+   for w in range(14):
+       yieldamount = input(float("In order, input what the cow yield was, twice a day for the entire week"))
+       while yieldamount > 12:
+           yieldamount = input(float("That's too large, what yield did the cow get?"))
+       cow_yield.append(round(yieldamount,3))
+
+#task 2
+
+totalyield = float
+averageyield = []
+single_cow_total = 0
+set_number = int
+
+#this adds up the total yield for each cow for the entire week
+for i in range(cows*14):
+   totalyield = totalyield + cow_yield[i]
+print("total yield for week is: ", totalyield)
+
+#adds up total yield for each cow and finds average
+for i in range(cows):
+    set_number = 14*cows
+    for r in range(14):
+        single_cow_total = single_cow_total + cow_yield[r+set_number]
+    averageyield.append(single_cow_total/14)
+    single_cow_total = 0
+
+#prints code identity followed by the average for each cow
+for i in range(cows):
+    print("cow identity: ", cow_identity[i])
+    print("yield: ", averageyield[i])
+
+
+#task 3
+
+#takes average and finds the biggest one and times it by 14 to get the yield
+max_cow = 0
+max_identity = int
+daily_yield = []
+smol_yield = []
+for i in range(cows):
+    if max_cow < averageyield[i]:
+        max_cow = averageyield[i]
+        max_identity = cow_identity[i]
+print("max yield from cow: ", max_cow*14)
+print("cow identity of max yield cow: ", cow_identity)
+
+#adds together the yield for each day and after 7 loops has passed it calculates if any of the yields are less than 12 and if it is more than 4 it will append the cow identity to the list
+for i in range(cow_yield/2):
+    daily_yield.append((i*2) +((i*2)-1))
+    if i % 7 == 0:
+        set_number = i-7
+        for r in range(7):
+            if daily_yield[r+set_number] < 12:
+                twat_cow = twat_cow + 1
+        if twat_cow > 3:
+            smol_yield.append(cow_identity[i/7])
+
+print("identities of cows which produced less than 12 litres: ", smol_yield)
