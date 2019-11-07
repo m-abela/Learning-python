@@ -1,0 +1,100 @@
+#task 1
+cow1 = []
+cow2 = []
+cow3 = []
+cowid1 = int
+cowid2 = int
+cowid3 = int
+yieldamount = 14
+
+cowid1 = input(int("what's cow 1's ID?"))
+while len(cowid1) > 3:
+    cowid1 = input(int("That's longer than 3 digits, what's cow 1's ID?"))
+
+for i in range(7):
+    yieldamount = input(float("What's the yield from cow 1 in the morning?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow1.append(round(yieldamount,3))
+    yieldamount = 14
+
+    yieldamount = input(float("What's the yield from cow 1 in the evening?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow1.append(round(yieldamount,3))
+    yieldamount = 14
+
+cowid2 = input(int("what's cow 2's ID?"))
+while len(cowid2) > 3:
+    cowid2 = input(int("That's longer than 3 digits, what's cow 2's ID?"))
+
+for i in range(7):
+    yieldamount = input(float("What's the yield from cow 2 in the morning?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow2.append(round(yieldamount,3))
+    yieldamount = 14
+
+    yieldamount = input(float("What's the yield from cow 2 in the evening?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow2.append(round(yieldamount,3))
+    yieldamount = 14
+
+cowid3 = input(int("what's cow 3's ID?"))
+while len(cowid3) > 3:
+    cowid3 = input(int("That's longer than 3 digits, what's cow 3's ID?"))
+
+for i in range(7):
+    yieldamount = input(float("What's the yield from cow 3 in the morning?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow3.append(round(yieldamount,3))
+    yieldamount = 14
+
+    yieldamount = input(float("What's the yield from cow 3 in the evening?"))
+    while yieldamount > 12:
+        yieldamount = input(float("That's too large, what yield did the cow get?"))
+        cow3.append(round(yieldamount,3))
+    yieldamount = 14
+
+#task 2
+for i in range(14):
+    total = total + cow1[i] + cow2[i] + cow3[i]
+print("total yield: ", total)
+print("average yield per cow: ", total/3)
+
+#task 3
+for i in range(14):
+    cow1_total = cow1_total + cow1[i]
+    cow2_total = cow2_total + cow2[i]
+    cow3_total = cow3_total + cow3[i]
+
+if cow1_total > cow2_total:
+    if cow1_total > cow3_total:
+        print("first cow has the biggest yield: ",cow1_total)
+    else:
+        print("third cow has the biggest yield: ",cow3_total)
+else:
+    if cow2_total > cow3_total:
+        print("second cow has the biggest yield: ",cow2_total)
+    else:
+        print("third cow has the biggest yield: ",cow3_total)
+
+for i in range(7):
+    if (cow1[i*2] +cow1[(i*2)-1]) < 12:
+        failure = failure + 1
+if failure > 4:
+    print("cow 1 is failure whatre u doing bro", cowid1)
+
+for i in range(7):
+    if (cow2[i*2] +cow2[(i*2)-1]) < 12:
+        failure = failure + 1
+if failure > 4:
+    print("cow 2 is failure whatre u doing bro", cowid2)
+
+for i in range(7):
+    if (cow3[i*2] +cow3[(i*2)-1]) < 12:
+        failure = failure + 1
+if failure > 4:
+    print("cow 3 is failure whatre u doing bro", cowid3)
