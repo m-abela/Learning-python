@@ -1,0 +1,11 @@
+import datetime
+names = ["year", "month", "day"]
+d1 = []
+d2 = []
+for i in range(3):
+    d1.append(int(input(("d1 input ", names[i]))))
+    d2.append(int(input(("d2 input ", names[i]))))
+d1t = datetime.date(d1[0],d1[1],d1[2])
+d2t = datetime.date(d2[0],d2[1],d2[2])
+change = d1t - d2t
+print(change)
