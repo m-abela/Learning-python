@@ -1,18 +1,28 @@
 import random
-song = []
-artists = []
-band1 = []
-band2 = []
+songs = []
+shuffle = []
+artistchosen = int
+def newartist(artistnum):
+    songtemp = []
+    print("for artist: ", artistnum+1)
+    for i in range(10):
+        songtemp.append(1)
+    return(songtemp)
+
 for i in range(10):
-    song.append(input("input a song"))
-    artists.append(input("input an artist"))
-for i in range(5):
-    artistchosen = artists[(random.randint(1,len(artists)))]
-    artists.remove(artistchosen)
-    band1.append(artistchosen)
-    artistchosen = artists[(random.randint(1,len(artists)))]
-    artists.remove(artistchosen)
-    band2.append(artistchosen)
-for i in range(10):
-    band1songs.appendsong[(random.randint(1,10))]
-    band2songs.appendsong[(random.randint(1,10))]
+    songs.append(newartist(i))
+
+for i in range(100):
+    print(i)
+    blacklist = []
+    artistchosen = random.randrange(0,10)
+    while(artistchosen in blacklist) and (len(songs[artistchosen] != 0)):
+        artistchosen = random.randrange(0,10)
+    blacklist.append(artistchosen)
+    songchosen = random.randrange(0,len(songs[artistchosen]))
+    shuffle.append(songs[artistchosen][songchosen])
+    songs[artistchosen].remove(songs[artistchosen][songchosen])
+    if i > 2:
+        blacklist.pop(0)
+
+print(shuffle)
