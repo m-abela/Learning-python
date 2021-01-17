@@ -1,0 +1,13 @@
+list = [1, 2, 3, 4]
+minimum = 1000
+
+for i in range(len(list)):
+    for j in range(len(list)-1):
+        if list[0] > list[j+1]:
+            if(list[0] - list[j+1]) < minimum:
+                minimum = list[0] - list[j+1]
+    current = list[0]
+    list.pop(0)
+    list.append(current)
+
+print(minimum)

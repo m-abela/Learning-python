@@ -1,0 +1,9 @@
+number = []
+newlist = []
+while True:
+    number.append(int(input("add a number")))
+    if(input("finished adding") == "yes"):
+        break
+newlist.append(number[0])
+newlist.append(number[len(number)])
+print(newlist)

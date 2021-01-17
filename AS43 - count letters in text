@@ -1,0 +1,6 @@
+import collections
+f = open("text.txt", 'r')
+letters = ""
+for letter in f:
+    letters += letter
+print(collections.Counter(letters))

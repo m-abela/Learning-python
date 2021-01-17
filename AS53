@@ -1,0 +1,36 @@
+candidates_vote = []
+templist = []
+votechoice = int(input("number of canddiates"))
+numofvoters = int(input("number of voters"))
+votecount = []
+
+global choiceround
+choiceround = int(0)
+
+for i in range(numofvoters):
+    for j in range(votechoice):
+        templist.append(int(input("choice in numbers in order pls")))
+    candidates_vote.append(templist)
+    templist.clear()
+    
+for i in range(votechoice):
+    votecount.append(0)
+
+def countvotes(choice):
+    for i in range(votechoice):
+        for j in range(numofvoters):
+            if candidates_vote[i][choice] == i:
+                votecount[i] += 1
+    findhighest()
+
+def findhighest():
+    for i in range(len(votecount)):
+        if votecount[i] > highest:
+            highestcand = votecount[i]
+        if votecount[i] == highest:
+            highest = 0
+            choiceround += 1
+            countvotes(choiceround)
+    return highestcand
+
+print("the highest candidate was: ", countvotes(0))

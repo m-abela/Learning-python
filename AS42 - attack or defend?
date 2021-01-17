@@ -1,0 +1,44 @@
+whichplayer = bool
+class player:
+    def __init__(self, health = 0, attack = 0, defence = 0):
+        self.health = health
+        self.attack = attack
+        self.defence = defence
+
+object1 = player(100, 20, 10)
+object2 = player(70, 10, 20)
+
+print("player 1 your health, attack and defence is ", object1.health, object1.attack, object1.defence)
+print("player 2 your health, attack and defence is ", object2.health, object2.attack, object2.defence)
+
+def move(turn, defend):
+    if turn == True:
+        if defend == True:
+            object2.health -= (object1.attack - object2.defence)
+        else:
+            object2.health -= object1.attack
+    else:
+        if defend == True:
+            object1.health -= (object2.attack - object1.defence)
+        else:
+            object1.health -= object2.attack
+
+
+while (object1.health > 0) and (object2.health > 0):
+    print("player 1 your health is: ", object1.health)
+    print("player 2 your health is: ", object2.health)
+    
+    if whichplayer == True:
+        attack = input("attack or defend player 1? True or False")
+        move(True, attack)
+        whichplayer = False
+    else:
+        attack = input("attack or defend player 1? True or False")
+        move(True, attack)
+        whichplayer = True
+
+
+if(object1.health < object2):
+    print("player 1 you win!")
+else:
+    print("player 2 you win!")

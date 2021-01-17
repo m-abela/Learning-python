@@ -1,0 +1,17 @@
+import random
+number = random.randrange(0,112)
+print("number is: ", number)
+guess = random.randrange(0,112)
+print("first guess is: ", guess)
+lowest = 0
+highest = 111
+
+while True:
+    if input("higher or lower") == "higher":
+        lowest = guess
+    else:
+        highest = guess
+    guess = random.randrange(lowest+1, highest-1)
+    print("guess is: ", guess)
+    if guess == number:
+        break

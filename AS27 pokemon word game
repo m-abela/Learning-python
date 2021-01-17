@@ -1,0 +1,14 @@
+import random
+word = 0
+wordlist = []
+f = open("pokemon.txt", 'r')
+vocab = []
+for lines in f:
+    vocab.append(lines.rstrip("\n"))
+current = vocab[random.random(0, len(vocab))]
+wordlist.append(current)
+while True:
+    for i in range(len(vocab)):
+        if(current[-1] == vocab[i][0]):
+            if(vocab[i] not in wordlist):
+                current = vocab[i]

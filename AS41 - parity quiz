@@ -1,0 +1,25 @@
+import random
+parity = ""
+even = 0
+evenparity = bool
+add = 0
+
+while True:
+    for i in range (8):
+        add = random.randrange(0,2)
+        if add == 1:
+            even = even + 1
+        parity = parity + str(add)
+
+    if even % 2 == 0:
+        evenparity = True
+    else:
+        evenparity = False
+    even = 0
+    print(parity)
+    answer = input("even or odd parity")
+    if (answer == "even") and (evenparity == True):
+        print("good!")
+    elif (answer == "odd") and (evenparity == False):
+        print("nah man")
+    parity = ""

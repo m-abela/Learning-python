@@ -1,0 +1,7 @@
+import random
+for i in range (0,100):
+    b1 = random.choice(["10","172","192"])
+    b2 = random.randint(16,31)
+    b3 = random.randint(0,255)
+    b4 = random.randint(0,255)
+    print(".".join(map(str,([b1,b2,b3,b4]))))

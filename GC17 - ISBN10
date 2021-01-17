@@ -1,0 +1,7 @@
+ISBN = []
+total = 0
+for i in range(10):
+    ISBN.append(int(input("input isbn")))
+for i in range(9):
+    total = total + (ISBN[i]*(10-i))
+print(11-total%11)

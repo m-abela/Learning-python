@@ -1,0 +1,7 @@
+import random
+ball = []
+f = open("8ball.txt", 'r')
+for lines in f :
+    ball.append(lines.rstrip("\n"))
+question = input("what is it you want to ask?")
+print(ball[random.randrange(0, len(ball))])

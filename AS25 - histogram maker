@@ -1,0 +1,7 @@
+histogram = []
+done = False
+while done != "yes":
+    histogram.append(int(input("gimme da numbers")))
+    done = input("are you done?")
+for i in range(len(histogram)):
+    print("*" * histogram[i])

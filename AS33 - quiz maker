@@ -1,0 +1,18 @@
+from random import randint
+questions = []
+ans = []
+f = open("questions", "r")
+for lines in f :
+    questions.append(lines.rstrip("\n"))
+f = open("ans", "r")
+for lines in f :
+    ans.append(lines)
+
+while True:
+    num = randint(0, len(questions))
+    que = input("give the definition of " + questions[num])
+    print(ans[num])
+    if(que == ans[num]):
+        print("correct!")
+    if(input("would you like to stop?") == "yes"):
+        break

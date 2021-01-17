@@ -1,0 +1,10 @@
+wordlist = ["banana", "orange", "banana", "banana"]
+wordlist2 = []
+
+def removeduplicates():
+    for i in range(len(wordlist)):
+        if wordlist[i] not in wordlist2:
+            wordlist2.append(wordlist[i])
+
+
+removeduplicates()

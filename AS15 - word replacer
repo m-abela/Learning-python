@@ -1,0 +1,23 @@
+f = open("pseudocode.txt", 'r')
+pseudo = []
+newstring = ""
+newpseudo = []
+for lines in f:
+    pseudo.append(lines.rstrip("\n"))
+f.close()
+replace = {"for": "FOR", "=": "<--", "if": "IF", "==": "EQUALS", "while": "WHILE", "until": "UNTIL", "import": "IMPORT", "else:": "ELSE:", "elif": "ELSEIF", "in": "IN"}
+
+for i in range(len(pseudo)):
+    for word in pseudo[i].split():
+        if word in replace:
+            newstring += replace[word]
+            print(replace[word])
+            print("yes")
+        else:
+            newstring += word
+    newpseudo.append(newstring)
+    newstring = ""
+
+f= open("newpseudo","w+")
+for i in range(len(newpseudo)):
+    f.write(newpseudo[i] + "\n")

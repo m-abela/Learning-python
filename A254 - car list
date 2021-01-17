@@ -1,0 +1,21 @@
+done = ""
+car = 0
+cars = []
+class carrecord:
+    def __init__(self, name, vehicleID, registration, dateofregistration, enginesize, purchaseprice):
+        self.name = name
+        self.vehicleID = vehicleID
+        self.registration = registration
+        self.dateofregistrations = dateofregistration
+        self.enginesize = enginesize
+        self.purchaseprice = purchaseprice
+
+while done != "yes":
+    vehicleID = input("input vehicle ID")
+    registration = input("registration")
+    dateofregistration = input("date of registration")
+    enginesize = input("engine size")
+    purchaseprice = input("purchase price")
+    name = str("car"+str(car))
+    cars.append(carrecord(name, vehicleID, registration, dateofregistration, enginesize, purchaseprice))
+    done = input("done? input yes")

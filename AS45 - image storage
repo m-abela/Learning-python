@@ -1,0 +1,5 @@
+images = input("how many images do you want to take")
+w = int(input("how much width resolution"))
+h = int(input("input how much height for resolution"))
+storage = w*h*8
+print("storage needed: ", storage, "bits")
